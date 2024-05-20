@@ -1,6 +1,6 @@
 This project are a smart home simulator
 
-The are six classes in the project. 
+There are six classes in the project. 
 
 >> coffe.java.
 >> drinks.java.
