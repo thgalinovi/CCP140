@@ -1,24 +1,26 @@
-package com.mycompany.orientecao_projeto;
+public class smartsound extends control{
+    private double volume;//refers to the volume of the smartsound
+    private boolean power2;
 
-public class smartsound{
-    private int volume;//refers to the volume of the smartsound
-    private boolean power;
-    
-    public void setPower (boolean power){
-        if(power == false){
-            System.out.println("Turning off the Sound.");
+    public smartsound(Boolean p){
+        super(p);
+        if(p == false){
+            System.out.println("# Turning off the Sound.");
         }else{
-            System.out.println("Turning on the Sound");
+            System.out.println("# Turning on the Sound");
         }
-        this.power = power;
+        this.power2 = p;
     }
 
-    public boolean getPower() {
-        return power;
+    public boolean getPower2() {
+        return power2;
     }
-    
-    public void setVolume(int volume){
-        boolean tpower = getPower();
+
+    public smartsound(Boolean p,double v){
+        super(p,v);
+        this.power2 = p;
+        this.volume = v;
+        boolean tpower = getPower2();
         if(tpower==true){
           if(volume>=0 && volume<=100 ){        
               this.volume = volume;
@@ -28,12 +30,12 @@ public class smartsound{
           }
           if(volume>=80 && volume<=100){
              System.out.println("# Warning: It is so high. Be careful!!");
-    
+
           }
         }else{
             System.out.println("# The SmartSound is offline in this moment. Try again.");
         }
-  
+
     }
-      
+
 }

@@ -1,7 +1,5 @@
-package com.mycompany.orientecao_projeto;
-
 public enum drinks {
-   
+
     ristretto(1),
     cappuccino(2),
     latte(3),
@@ -16,12 +14,12 @@ public enum drinks {
     drinks(int drinksnum){
       this.drinksnum = drinksnum;
     }
-  
-  
+
+
     public int getDrinksnum() {
         return drinksnum;
     }
-    
+
     public static drinks fromNumber(int number) {
       for (drinks drinks : drinks.values()) {
           if (drinks.getDrinksnum() == number) {
@@ -30,7 +28,7 @@ public enum drinks {
       }
       throw new IllegalArgumentException("# Invalid Number: " + number);
   }
-  
-    
-    
+
+
+
 }

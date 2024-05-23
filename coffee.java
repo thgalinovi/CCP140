@@ -1,18 +1,17 @@
-package com.mycompany.orientecao_projeto;
-
 import java.util.Scanner;
 
-public class coffee {
+public class coffee extends control {
 
-    private boolean power;
+    private boolean power2;
     Scanner sc = new Scanner(System.in);
-    
-    public void setPower(boolean power) {
-        if(power == false){
+
+    public coffee(Boolean p) {
+        super(p);
+        if(p == false){
             System.out.println("# The Coffee Machine is offline now.");
         }else{
         System.out.println("# Turning on the Coffee Machine.");
-        this.power = power;
+        this.power2 = p;
         }
     }
 
