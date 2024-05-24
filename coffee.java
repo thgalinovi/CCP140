@@ -1,36 +1,46 @@
+package com.mycompany.final_project;
 import java.util.Scanner;
 
 public class coffee extends control {
 
-    private boolean power2;
+    //private boolean power2;
     Scanner sc = new Scanner(System.in);
 
-    public coffee(Boolean p) {
-        super(p);
-        if(p == false){
-            System.out.println("# The Coffee Machine is offline now.");
-        }else{
-        System.out.println("# Turning on the Coffee Machine.");
-        this.power2 = p;
-        }
+    public coffee(){
+
     }
 
     public void choose() {
-        System.out.println("# Choose your drink: #");
-        System.out.println("# ristretto(1)");
-        System.out.println("# cappuccino(2)");
-        System.out.println("# latte(3)");
-        System.out.println("# americano(4)");
-        System.out.println("# espresso(5)");
-        System.out.println("# mocha(6)");
-        System.out.println("# macchiato(7)");
-        System.out.println("# lungo(8)");
-        System.out.println("# water(9)");
-        System.out.println("# Type your option now: ");
+        System.out.println("# Machine Coffe: Choose your drink: #");
+        System.out.println("# Machine Coffe: Ristretto(1)");
+        System.out.println("# Machine Coffe: Cappuccino(2)");
+        System.out.println("# Machine Coffe: Latte(3)");
+        System.out.println("# Machine Coffe: Americano(4)");
+        System.out.println("# Machine Coffe: Espresso(5)");
+        System.out.println("# Machine Coffe: Mocha(6)");
+        System.out.println("# Machine Coffe: Macchiato(7)");
+        System.out.println("# Machine Coffe: Lungo(8)");
+        System.out.println("# Machine Coffe: Water(9)");
+        System.out.println("# Machine Coffe: Type your option now: ");
+
+        //Log Message
+        logger.log("# Machine Coffe: Choose your drink: #");
+        logger.log("# Machine Coffe: Ristretto(1)");
+        logger.log("# Machine Coffe: Cappuccino(2)");
+        logger.log("# Machine Coffe: Latte(3)");
+        logger.log("# Machine Coffe: Americano(4)");
+        logger.log("# Machine Coffe: Espresso(5)");
+        logger.log("# Machine Coffe: Mocha(6)");
+        logger.log("# Machine Coffe: Macchiato(7)");
+        logger.log("# Machine Coffe: Lungo(8)");
+        logger.log("# Machine Coffe: Water(9)");
+        logger.log("# Machine Coffe: Type your option now: ");
 
         String temp = sc.nextLine();
         int temp2 = Integer.parseInt(temp);
         drinks drink = drinks.fromNumber(temp2);
-        System.out.println("# The choosen was: " + drink);
+        System.out.println("# Machine Coffe: The choosen was " + drink);
+        //Log Message
+        logger.log("# Machine Coffe: The choosen was " + drink);
     }
 }

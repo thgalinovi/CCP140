@@ -1,41 +1,35 @@
-public class smartsound extends control{
+package com.mycompany.final_project;
+public class smartsound extends control implements isound{
     private double volume;//refers to the volume of the smartsound
-    private boolean power2;
 
-    public smartsound(Boolean p){
-        super(p);
-        if(p == false){
-            System.out.println("# Turning off the Sound.");
+    //Only a constructor
+    public smartsound(){}
+
+    //setSound Interface Module 
+    public boolean setVolume(double value){
+         if(value >= 0 && value <= 100){
+             if(value>=80 && value<=100){
+                  System.out.println("# SmartSound: Warning: It is so high. Be careful!!");
+                  //Log Message
+                logger.log("# SmartSound: Warning: It is so high. Be careful!!");
+            }
+             System.out.println("# SmartSound: Increasing the volume to " + value + "%.");
+             //Log Message
+            logger.log("# SmartSound: Increasing the volume to " + value + "%.");
+             this.volume = value;
+             return true;
         }else{
-            System.out.println("# Turning on the Sound");
-        }
-        this.power2 = p;
+            System.out.println("# SmartSound: The volume setted is invalid.");
+            //Log Message
+            logger.log("# SmartSound: The volume setted is invalid.");
+            return false;
+        }        
     }
 
-    public boolean getPower2() {
-        return power2;
+    //smartSound Constructor
+    public smartsound(double v){
+        super(v);
+        setVolume(v);
     }
-
-    public smartsound(Boolean p,double v){
-        super(p,v);
-        this.power2 = p;
-        this.volume = v;
-        boolean tpower = getPower2();
-        if(tpower==true){
-          if(volume>=0 && volume<=100 ){        
-              this.volume = volume;
-              System.out.println("# Your Sound Volume are setted to " + this.volume);
-          }else{
-              System.out.println("# This sound setting does not exist.");
-          }
-          if(volume>=80 && volume<=100){
-             System.out.println("# Warning: It is so high. Be careful!!");
-
-          }
-        }else{
-            System.out.println("# The SmartSound is offline in this moment. Try again.");
-        }
-
-    }
-
+    
 }

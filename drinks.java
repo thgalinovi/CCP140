@@ -1,5 +1,6 @@
+package com.mycompany.final_project;
 public enum drinks {
-
+    
     ristretto(1),
     cappuccino(2),
     latte(3),
@@ -26,9 +27,9 @@ public enum drinks {
               return drinks;
           }
       }
+
       throw new IllegalArgumentException("# Invalid Number: " + number);
+
   }
-
-
 
 }
