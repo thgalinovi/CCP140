@@ -1,4 +1,4 @@
-This project are a smart home simulator
+This project are a smart home simulator to the CCP140 Class. 
 
 There are six classes in the project. 
 
